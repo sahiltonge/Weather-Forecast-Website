@@ -6,7 +6,11 @@ This project is a responsive web-based weather forecast application developed us
 
 ---
 
+<<<<<<< HEAD
 # Features
+=======
+## Features
+>>>>>>> 3d8c72a6901a64f37791bf8f9ca3d21dae2fda90
 
 - City-based weather search with input validation
 - Current location weather using the Geolocation API
@@ -22,15 +26,27 @@ This project is a responsive web-based weather forecast application developed us
 
 ---
 
+<<<<<<< HEAD
 # Objective
+=======
+## Objective
+>>>>>>> 3d8c72a6901a64f37791bf8f9ca3d21dae2fda90
 
 The goal of this project is to create a fully responsive weather forecast application that allows users to search for a city or use their current location to view real-time weather data and an extended forecast. The project focuses on clean design, functional interactivity, and usability across multiple screen sizes.
 
 ---
 
+<<<<<<< HEAD
 # Technologies Used
+=======
+## Technologies Used
+>>>>>>> 3d8c72a6901a64f37791bf8f9ca3d21dae2fda90
 
 - HTML5
 - Tailwind CSS (CLI version)
 - JavaScript (ES6)
 - WeatherAPI.com
+<<<<<<< HEAD
+=======
+
+>>>>>>> 3d8c72a6901a64f37791bf8f9ca3d21dae2fda90
