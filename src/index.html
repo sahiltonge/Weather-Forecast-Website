@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather Forecast</title>
+    <link href="./output.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  </head>
+  <body class="bg-gradient-to-br from-blue-100 to-white dark:from-gray-800 dark:to-gray-900 text-gray-800 dark:text-white min-h-screen flex flex-col">
+
+    <!-- Header -->
+    <header class="py-6 text-center">
+      <h1 class="text-3xl font-extrabold tracking-tight text-blue-700 dark:text-blue-400"> Weather Dashboard</h1>
+      <p class="text-sm text-gray-500 dark:text-gray-400">Get real-time and 5-day weather info instantly</p>
+    </header>
+
+    <!-- Main -->
+    <main class="flex-grow w-full max-w-4xl px-4 mx-auto space-y-6">
+
+      <!-- Input Controls -->
+      <section class="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg space-y-4">
+        <div class="flex flex-col sm:flex-row gap-4">
+          <input
+            id="cityInput"
+            type="text"
+            placeholder="Search for a city..."
+            class="flex-1 p-3 rounded-md border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 focus:outline-none"
+          />
+          <button
+            onclick="getWeatherByCity()"
+            class="bg-blue-600 hover:bg-blue-700 text-white px-5 py-3 rounded-md transition"
+          >
+            Search
+          </button>
+          <button
+            onclick="getWeatherByLocation()"
+            class="bg-green-600 hover:bg-green-700 text-white px-5 py-3 rounded-md transition"
+          >
+             Current Location
+          </button>
+        </div>
+
+        <!-- Recent Cities -->
+        <div>
+          <label for="recentCities" class="block text-sm font-medium mb-1">Recent Searches:</label>
+          <select
+            id="recentCities"
+            onchange="loadRecentCity(this.value)"
+            class="w-full p-2 rounded border dark:bg-gray-700 dark:border-gray-600"
+          >
+            <option value="">-- Select a city --</option>
+          </select>
+        </div>
+      </section>
+
+      <!-- Current Weather Card -->
+      <section id="currentWeather" class="hidden bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg text-center space-y-2">
+        <h2 id="cityName" class="text-2xl font-bold"></h2>
+        <img id="icon" class="mx-auto w-20 h-20" />
+        <p id="condition" class="capitalize text-lg font-medium"></p>
+        <p id="temp" class="text-xl font-semibold"></p>
+        <div class="flex justify-center gap-6 text-sm mt-2">
+          <p id="humidity"></p>
+          <p id="wind"></p>
+        </div>
+      </section>
+
+      <!-- 5-Day Forecast Grid -->
+      <section id="forecast" class="hidden grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4">
+        <!-- Forecast cards will be injected here -->
+      </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white dark:bg-gray-800 border-t border-gray-200 dark:border-gray-700 mt-10">
+      <div class="max-w-6xl mx-auto px-4 py-6 sm:flex sm:items-center sm:justify-between">
+
+        <div class="text-center sm:text-left text-sm text-gray-600 dark:text-gray-400">
+          <p>&copy;  <span class="font-semibold text-blue-600 dark:text-blue-400">Build by Sahil</span>. Using Tailwind CLI and WeatherAPI.</p>
+        </div>
+
+       <div class="mt-4 sm:mt-0 flex justify-center sm:justify-end space-x-4">
+  <div class="mt-6 flex justify-center sm:justify-end space-x-6">
+  <!-- GitHub Button -->
+  <a href="https://github.com/sahil_tonge" target="_blank"
+     class="flex flex-col items-center text-gray-700 dark:text-white">
+    <div class="w-14 h-14 bg-gradient-to-b from-gray-100 to-gray-300 dark:from-gray-700 dark:to-gray-800 
+                shadow-md rounded-full flex items-center justify-center 
+                transform hover:translate-y-[-2px] hover:shadow-xl transition duration-300">
+      <i class="fab fa-github text-2xl"></i>
+    </div>
+    <span class="mt-2 text-sm font-medium tracking-wide hover:underline">GitHub</span>
+  </a>
+
+  <!-- LinkedIn Button -->
+  <a href="https://linkedin.com/in/sahil-tonge" target="_blank"
+     class="flex flex-col items-center text-gray-700 dark:text-white">
+    <div class="w-14 h-14 bg-gradient-to-b from-blue-200 to-blue-500 dark:from-blue-700 dark:to-blue-900 
+                shadow-md rounded-full flex items-center justify-center 
+                transform hover:translate-y-[-2px] hover:shadow-xl transition duration-300">
+      <i class="fab fa-linkedin-in text-2xl text-white"></i>
+    </div>
+    <span class="mt-2 text-sm font-medium tracking-wide hover:underline">LinkedIn</span>
+  </a>
+</div>
+
+      </div>
+    </footer>
+
+    <script src="./script.js"></script>
+  </body>
+</html>

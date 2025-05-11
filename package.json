@@ -1,0 +1,24 @@
+{
+  "name": "weather-app",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/sahiltonge/Weather-App-2#readme",
+  "bugs": {
+    "url": "https://github.com/sahiltonge/Weather-App-2/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sahiltonge/Weather-App-2.git"
+  },
+  "license": "ISC",
+  "author": "Sahil Tonge",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "@tailwindcss/cli": "^4.1.6",
+    "tailwindcss": "^4.1.6"
+  }
+}
